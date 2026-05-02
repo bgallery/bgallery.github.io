@@ -81,7 +81,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;justify-content
 .fc.bl{bottom:-9px;left:-9px;border-width:0 0 2px 2px}
 .fc.br{bottom:-9px;right:-9px;border-width:0 2px 2px 0}
 .fib{position:absolute;inset:-9px;border:1px solid var(--brd);pointer-events:none}
-.painting-img{width:100%;display:block;aspect-ratio:3/4;object-fit:cover}
+.painting-img{width:100%;display:block;aspect-ratio:1280/868;object-fit:cover}
 
 .month-bar{margin-top:1.3rem}
 .mblab{display:flex;justify-content:space-between;font-family:'Montserrat',sans-serif;font-size:.5rem;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);margin-bottom:.4rem}
@@ -175,6 +175,17 @@ footer{background:var(--bg3);padding:2.5rem 4rem;display:flex;justify-content:sp
 .fl span{display:block;font-family:'Montserrat',sans-serif;font-size:.5rem;letter-spacing:.35em;color:var(--teal);text-transform:uppercase;margin-top:3px}
 .fc2{font-family:'Montserrat',sans-serif;font-size:.5rem;letter-spacing:.15em;color:var(--muted)}
 
+/* ARCHIVE */
+.archive{background:var(--bg2);padding:8rem 4rem;border-top:1px solid var(--brd)}
+.archive-inner{max-width:1080px;margin:0 auto}
+.archive-month{font-family:'Playfair Display',serif;font-size:clamp(2rem,4vw,3.5rem);color:var(--ink);margin-bottom:3rem;padding-bottom:1.5rem;border-bottom:1px solid var(--brd)}
+.archive-card{display:grid;grid-template-columns:320px 1fr;gap:3rem;align-items:start}
+.archive-card img{width:100%;display:block;aspect-ratio:4/5;object-fit:cover}
+.archive-card-name{font-family:'Playfair Display',serif;font-style:italic;font-size:1.3rem;color:var(--ink);margin-bottom:.2rem}
+.archive-card-author{font-family:'Montserrat',sans-serif;font-size:.56rem;letter-spacing:.22em;color:var(--gold);text-transform:uppercase;margin-bottom:.85rem}
+.archive-card-text{font-size:.95rem;line-height:1.78;font-weight:300;color:var(--muted);margin-bottom:.7rem}
+.archive-card-dates{margin-top:.85rem;font-family:'Montserrat',sans-serif;font-size:.5rem;letter-spacing:.18em;color:rgba(122,112,96,.45);text-transform:uppercase}
+
 @media(max-width:860px){
   nav{padding:1.1rem 1.4rem}
   .hero{grid-template-columns:1fr}
@@ -192,7 +203,13 @@ footer{background:var(--bg3);padding:2.5rem 4rem;display:flex;justify-content:sp
   .logo-coffee-inner{grid-template-columns:1fr}
   .concept,.features,.drinks,.location-section,.cafe-photos,.logo-coffee{padding:5rem 1.4rem}
   footer{flex-direction:column;gap:1.2rem;text-align:center;padding:2rem 1.4rem}
+  .archive{padding:5rem 1.4rem}
+  .archive-card{grid-template-columns:1fr}
 }
+.lb{display:none;position:fixed;inset:0;background:rgba(30,26,18,.92);z-index:999;align-items:center;justify-content:center;cursor:zoom-out}
+.lb.open{display:flex}
+.lb img{max-width:92vw;max-height:92vh;object-fit:contain;box-shadow:0 8px 60px rgba(0,0,0,.5)}
+.painting-img{cursor:zoom-in}
 </style>
 </head>
 <body>
@@ -223,19 +240,19 @@ footer{background:var(--bg3);padding:2.5rem 4rem;display:flex;justify-content:sp
       <div class="fc tl"></div><div class="fc tr"></div>
       <div class="fc bl"></div><div class="fc br"></div>
       <div class="fib"></div>
-      <img class="painting-img" src="img/1/art.jpeg" alt="«Сон тамариска» — Александра Романова"/>
+      <img class="painting-img" src="img/2/may2026.jpg" alt="«Анютины глазки» — Александра Романова"/>
     </div>
     <div class="month-bar">
-      <div class="mblab"><span>1 апреля</span><span>30 апреля</span></div>
-      <div class="mbtrack"><div class="mbfill" style="--pct:10%"></div></div>
+      <div class="mblab"><span>1 мая</span><span>31 мая</span></div>
+      <div class="mbtrack"><div class="mbfill" style="--pct:7%"></div></div>
     </div>
     <div class="pinfo">
-      <div class="pname">«Сон тамариска»</div>
+      <div class="pname">«Анютины глазки»</div>
       <div class="pauthor">Автор: Александра Романова</div>
-      <p class="ptext">Тихая поэма, рождённая после путешествия в Нукус. Каракалпакская девушка в традиционном одеянии застыла на фоне Аральского моря — того, чего уже нет. На горизонте — призрак корабля, навсегда оставшегося в песках.</p>
-      <p class="ptext" style="margin-top:.7rem">Но девушка не смотрит в прошлое. Она словно купается в розовом мареве цветущего тамариска — растения, умеющего жить там, где отступила вода. В её облике соединились царевна-лебедь Врубеля и строгая геометрия степных ковров.</p>
-      <p class="ptext" style="margin-top:.7rem;font-style:italic;color:var(--gold)">«О том, как красота побеждает пустоту, а традиция продолжает свой узор даже на краю земли.»</p>
-      <div class="pdates">Апрель 2026 · Холст, масло · 80 × 100 см · Путешествие в Нукус</div>
+      <p class="ptext">Это произведение, написанное весной 2024 года с натуры, — не просто натюрморт, а абсолютное ощущение пробуждающейся природы. Художница сознательно идёт на разрыв масштаба: привычные крошечные цветы на полотне превращаются в гигантские, дышащие формы.</p>
+      <p class="ptext" style="margin-top:.7rem">Перед зрителем разворачивается чистый цветовой поток, где мазки лепестков теряют иллюстративность и обретают живую плоть. Тем не менее, в этой абстрактной стихии цвета мы безошибочно узнаём знакомые «фиалки трёхцветные» — их бархатную глубину и трепетную светотень.</p>
+      <p class="ptext" style="margin-top:.7rem">Александра Романова фиксирует момент, когда нежный весенний цветок становится вселенной, а быстрый этюд с натуры перерастает в монументальное высказывание. В мае здесь нет ничего, кроме цветов и света. И этого достаточно.</p>
+      <div class="pdates">Май 2026 · Холст, масло · Этюд с натуры · 2024</div>
     </div>
   </div>
 </section>
@@ -253,6 +270,24 @@ footer{background:var(--bg3);padding:2.5rem 4rem;display:flex;justify-content:sp
   <span class="ticker-item">Bounty Coffee Bar · Абдулла Кодирий, 25</span>
   <span class="ticker-item">Открыто без выходных</span>
 </div></div>
+
+<!-- ARCHIVE -->
+<section class="archive">
+  <div class="archive-inner">
+    <div class="archive-month">Апрель</div>
+    <div class="archive-card">
+      <img src="img/1/art.jpeg" alt="«Сон тамариска» — Александра Романова"/>
+      <div>
+        <div class="archive-card-name">«Сон тамариска»</div>
+        <div class="archive-card-author">Александра Романова</div>
+        <p class="archive-card-text">Дорожный дневник из Нукуса — это не туристические заметки, а внутреннее путешествие сквозь пространство, где время течёт иначе. Художница отправляется к берегам Аральского моря и возвращается с единственным образом: тамариском.</p>
+        <p class="archive-card-text">Это дерево умеет выживать там, где всё остальное сдалось. Его корни уходят в солёную землю, ветви собирают влагу из воздуха, а цветы появляются вопреки всему. Романова пишет его не как пейзаж — как характер.</p>
+        <p class="archive-card-text">Розовая дымка соцветий над бело-серой пустошью. Тихое, упрямое присутствие жизни в месте, которое мир, кажется, уже забыл.</p>
+        <div class="archive-card-dates">Апрель 2026 · Холст, масло · 80 × 100 см</div>
+      </div>
+    </div>
+  </div>
+</section>
 
 <!-- CONCEPT -->
 <section class="concept">
@@ -350,5 +385,15 @@ footer{background:var(--bg3);padding:2.5rem 4rem;display:flex;justify-content:sp
   <div class="fc2">© 2026 Bounty Coffee Bar</div>
 </footer>
 
+<div id="lb" class="lb"><img id="lb-img" src="" alt=""/></div>
+<script>
+var lb=document.getElementById('lb');
+document.querySelector('.painting-img').addEventListener('click',function(){
+  document.getElementById('lb-img').src=this.src;
+  lb.classList.add('open');
+});
+lb.addEventListener('click',function(){lb.classList.remove('open');});
+document.addEventListener('keydown',function(e){if(e.key==='Escape')lb.classList.remove('open');});
+</script>
 </body>
 </html>
